@@ -4,6 +4,37 @@
     margin: 0;
 }
 
+.hidden {
+    display: none;
+}
+
+/*Bootstrap Overrides*/
+.btn-outline-primary {
+    color: #db3e3e;
+    border-color: #db3e3e;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #db3e3e;
+    border-color: #db3e3e;
+}
+
+.btn-outline-primary:active {
+    color: #fff;
+    background-color: #db3e3e;
+    border-color: #db3e3e;
+}
+
+.btn-outline-primary:focus {
+    box-shadow: none;
+}
+
+.btn-outline-primary:active:focus {
+    box-shadow: none;
+}
+
+/*Site Specific*/
 html,
 body {
     background-color: grey;
@@ -14,23 +45,32 @@ body {
     height: 100vh;
 }
 
-.wrapper {
+#wrapper {
     width: 80%;
-    max-width: 600px;
+    max-width: 960px;
 }
 
 #quote-box {
-    padding: 50px;
+    margin: 40px 50px;
 }
 
 #text {
+    margin: 20px auto;
     text-align: left;
+    font-size: 1.5em;
+    line-height: 1.25em;
 }
 
 #author {
-    text-align: left;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1em;
 }
 
 .actions {
     text-align: center;
+}
+
+.button {
+    margin: 0 10px;
 }
