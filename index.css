@@ -4,24 +4,82 @@
     margin: 0;
 }
 
+.hidden {
+    display: none;
+}
+
+/*Bootstrap Overrides*/
+.btn-outline-primary {
+    color: #db3e3e;
+    border-color: #db3e3e;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #db3e3e;
+    border-color: #db3e3e;
+}
+
+.btn-outline-primary:active {
+    color: #fff;
+    background-color: #db3e3e;
+    border-color: #db3e3e;
+}
+
+.btn-outline-primary:focus {
+    box-shadow: none;
+}
+
+.btn-outline-primary:active:focus {
+    box-shadow: none;
+}
+
+.card {
+    background-color: rgba(255,255,255, 0.90);
+}
+
+/*Site Specific*/
 html,
 body {
-    background-color: grey;
     color: black;
+}
+#background {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-end;
+}
+
+#wrapper {
+    width: 90%;
+    max-width: 960px;
+    margin-bottom: 20px;
 }
 
 #quote-box {
-    
+    margin: 40px;
 }
 
 #text {
+    margin-bottom: 20px;
     text-align: center;
+    font-size: 1.5em;
+    line-height: 1.25em;
 }
 
 #author {
+    margin: 20px auto;
     text-align: center;
+    font-size: 1em;
+}
+
+.actions {
+    text-align: center;
+}
+
+.button {
+    margin: 0 10px;
 }

@@ -29,15 +29,26 @@
 
 </head>
 <body>
-    <div class="container-fluid card">
-        <div id="quote-box">
-            <div id="text">
-            </div>
-            <div id="author">
-            </div>
-            <div>
-                <a href="twitter.com/intent/tweet" id="tweet-quote">Tweet this</a>
-                <button id="new-quote" class="btn btn-outline-primary">New Quote</button>
+    <div id="background">
+        <div id="wrapper" class="hidden">
+            <div class="container-fluid card">
+                <div id="quote-box">
+                    <div id="text">
+                    </div>
+                    <div id="author">
+                    </div>
+                    <div class="actions">
+                        <a id="facebook-quote" class="btn btn-outline-primary button" href="twitter.com/intent/tweet">
+                            <i class="fa-brands fa-facebook-f fa-fw"></i>
+                        </a>
+                        <a id="tweet-quote" class="btn btn-outline-primary button" href="twitter.com/intent/tweet">
+                            <i class="fa-brands fa-twitter fa-fw"></i>
+                        </a>
+                        <button id="new-quote" class="btn btn-outline-primary button">
+                            <i class="fa-solid fa-arrows-rotate fa-fw"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
