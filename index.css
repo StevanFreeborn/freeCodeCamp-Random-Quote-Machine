@@ -1,0 +1,27 @@
+/*Utility*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    background-color: grey;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#quote-box {
+    
+}
+
+#text {
+    text-align: center;
+}
+
+#author {
+    text-align: center;
+}
