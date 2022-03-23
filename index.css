@@ -14,14 +14,23 @@ body {
     height: 100vh;
 }
 
+.wrapper {
+    width: 80%;
+    max-width: 600px;
+}
+
 #quote-box {
-    
+    padding: 50px;
 }
 
 #text {
-    text-align: center;
+    text-align: left;
 }
 
 #author {
+    text-align: left;
+}
+
+.actions {
     text-align: center;
 }
