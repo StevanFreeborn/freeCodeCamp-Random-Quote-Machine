@@ -25,9 +25,16 @@ function getQuote(){
     return data.quotes[randomValue];
 }
 
+function getImagePath(authorName){
+    let name = authorName.toLowerCase().replace(/\s/g, "-");
+    return `images/authors/${name}.jpg`;
+}
+
 // Get quote and author text on initial load.
 function displayQuoteAndAuthorText() {
     let quote = getQuote();
+    let imagePath = getImagePath(quote.author);
+    $("#background").css("background-image", `url(${imagePath})`);
     $("#text").text(quote.quote);
     $("#author").text("- " + quote.author);
     $("#wrapper").fadeIn("slow");
@@ -36,12 +43,19 @@ function displayQuoteAndAuthorText() {
 // Get new quote and author text when new quote button is clicked.
 function getNewQuoteAndAuthorText() {
     let quote = getQuote();
-    $("#text").fadeToggle("slow", function() {
+    let imagePath = getImagePath(quote.author);
+    console.log(imagePath);
+    $("#background").fadeOut("slow", function() {
+        $(this).css("background-image", `url(${imagePath})`);
+        $(this).fadeIn("slow");
+    });
+
+    $("#text").fadeOut("slow", function() {
         $(this).text(quote.quote);
         $(this).fadeIn("slow");
     });
 
-    $("#author").fadeToggle("slow", function() {
+    $("#author").fadeOut("slow", function() {
         $(this).text("- " + quote.author);
         $(this).fadeIn("slow");
     });

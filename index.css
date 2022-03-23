@@ -34,29 +34,38 @@
     box-shadow: none;
 }
 
+.card {
+    background-color: rgba(255,255,255, 0.90);
+}
+
 /*Site Specific*/
 html,
 body {
-    background-color: grey;
     color: black;
+}
+#background {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-end;
 }
 
 #wrapper {
-    width: 80%;
+    width: 90%;
     max-width: 960px;
+    margin-bottom: 20px;
 }
 
 #quote-box {
-    margin: 40px 50px;
+    margin: 40px;
 }
 
 #text {
-    margin: 20px auto;
-    text-align: left;
+    margin-bottom: 20px;
+    text-align: center;
     font-size: 1.5em;
     line-height: 1.25em;
 }
