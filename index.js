@@ -3,8 +3,9 @@ $(document).ready(function(){
     $("#new-quote").on('click', getNewQuoteAndAuthorText);
 });
 
-// Get quotes from json file in github repository.
 let data = [];
+
+// Get quotes from json file in github repository.
 function getQuotes(){
     return $.ajax({
         headers: {
@@ -18,26 +19,30 @@ function getQuotes(){
     });
 }
 
+// Select a quote randomly.
+function getQuote(){
+    let randomValue = Math.floor(Math.random() * data.quotes.length);
+    return data.quotes[randomValue];
+}
+
 // Get quote and author text on initial load.
 function displayQuoteAndAuthorText() {
-    let randomValue = Math.floor(Math.random() * data.quotes.length);
-    let quote = data.quotes[randomValue];
+    let quote = getQuote();
     $("#text").text(quote.quote);
-    $("#author").text(quote.author);
+    $("#author").text("- " + quote.author);
     $("#wrapper").fadeIn("slow");
 }
 
 // Get new quote and author text when new quote button is clicked.
 function getNewQuoteAndAuthorText() {
-    let randomValue = Math.floor(Math.random() * data.quotes.length);
-    let quote = data.quotes[randomValue];
+    let quote = getQuote();
     $("#text").fadeToggle("slow", function() {
         $(this).text(quote.quote);
         $(this).fadeIn("slow");
     });
 
     $("#author").fadeToggle("slow", function() {
-        $(this).text(quote.author);
+        $(this).text("- " + quote.author);
         $(this).fadeIn("slow");
     });
 }
